@@ -6,9 +6,8 @@ build: Dockerfile
 	docker build -t $(IMAGE) .
 
 run: clean-containers build
-	docker run --rm $(IMAGE) ruby2.1 --version
-	docker run --rm $(IMAGE) irb2.1 --version
-	docker run --rm $(IMAGE) gem2.1 --version
+	docker run --rm $(IMAGE) ruby --version
+	docker run --rm $(IMAGE) gem --version
 	docker images | grep $(IMAGE) | awk '{ print $$(NF-1), $$NF }'
 
 clean-containers:
