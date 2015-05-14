@@ -1,4 +1,4 @@
-FROM alpine
+FROM progrium/busybox
 MAINTAINER Andrew Pennebaker <andrew.pennebaker@gmail.com>
 
-RUN apk add --update ruby
+RUN opkg-install ruby ruby-gems

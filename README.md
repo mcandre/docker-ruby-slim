@@ -9,7 +9,7 @@ https://registry.hub.docker.com/u/mcandre/docker-ruby-slim/
 docker-ruby-slim is a container for Ruby, made smaller with a few techniques:
 
 * Use package managed [ruby](http://pkgs.alpinelinux.org/package/main/x86/ruby) instead of [RVM](https://rvm.io/).
-* Replace [ubuntu](https://registry.hub.docker.com/_/ubuntu/) with [alpine](https://registry.hub.docker.com/_/alpine/).
+* Replace [ubuntu](https://registry.hub.docker.com/_/ubuntu/) with [progrium/busybox](https://registry.hub.docker.com/u/progrium/busybox/).
 * Drop [Bundler](http://bundler.io/).
 * Drop [IRB](http://ruby-doc.org/stdlib-2.0/libdoc/irb/rdoc/IRB.html).
 
@@ -18,11 +18,11 @@ docker-ruby-slim is a container for Ruby, made smaller with a few techniques:
 ```
 $ make
 docker run --rm mcandre/docker-ruby-slim ruby --version
-ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-linux-musl]
+ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-linux-gnu]
 docker run --rm mcandre/docker-ruby-slim gem --version
-2.2.2
+2.4.5
 docker images | grep mcandre/docker-ruby-slim | awk '{ print $(NF-1), $NF }'
-17.7 MB
+14.85 MB
 ```
 
 # REQUIREMENTS
