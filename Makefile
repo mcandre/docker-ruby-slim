@@ -1,4 +1,4 @@
-IMAGE=mcandre/docker-ruby-slim
+IMAGE=mcandre/docker-ruby-slim:latest
 
 all: run
 
