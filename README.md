@@ -17,11 +17,11 @@ docker-ruby-slim is a container for Ruby, made smaller with a few techniques:
 
 ```
 $ make
-docker run --rm mcandre/docker-ruby-slim ruby --version
+docker run --rm mcandre/docker-ruby-slim:2.2 ruby --version
 ruby 2.2.1p85 (2015-02-26 revision 49769) [x86_64-linux-gnu]
-docker run --rm mcandre/docker-ruby-slim gem --version
+docker run --rm mcandre/docker-ruby-slim:2.2 gem --version
 2.4.5
-docker images | grep mcandre/docker-ruby-slim | awk '{ print $(NF-1), $NF }'
+docker images | grep mcandre/docker-ruby-slim:2.2 | awk '{ print $(NF-1), $NF }'
 14.85 MB
 ```
 
